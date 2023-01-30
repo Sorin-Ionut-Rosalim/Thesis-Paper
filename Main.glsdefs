@@ -1,0 +1,28 @@
+\glsdefs@newdocentry{ar}%
+{%
+name={\acronymfont {\glsentryshort {ar}}},%
+sort={AR},%
+type={acronym},%
+first={AR},%
+firstplural={ARs},%
+text={AR},%
+plural={ARs},%
+description={Augumented Reality},%
+descriptionplural={Augumented Reality},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Augumented Reality},%
+longplural={Augumented Realitys},%
+short={AR},%
+shortplural={ARs},%
+counter={page},%
+parent={},%
+%
+}%
+

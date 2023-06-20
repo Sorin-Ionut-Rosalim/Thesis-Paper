@@ -12,6 +12,7 @@
 \usepackage[inline]{enumitem}
 \usepackage[acronym]{glossaries}
 \usepackage{hyperref}
+\usepackage[printonlyused,withpage]{acronym}
 %\usepackage{...insert other packages here...}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
@@ -45,7 +46,7 @@
 
         FACULTY OF MATHEMATICS AND COMPUTER SCIENCE
 
-        BACHELOR:  Computer Science in romanian}}
+        BACHELOR:  Computer Science in English}}
 
     \vspace{120pt}
     {\huge {\bf BACHELOR THESIS}}
@@ -76,7 +77,7 @@
             BACHELOR:  Computer Science in English}}
 
     \vspace{200pt}
-    {\huge {\bf Development of an augmented reality app as an interactive tool}}
+    {\huge {\bf Development of a \ac{MAR} application as an interactive tool}}
 
     \vspace{153pt}
 \end{center}
@@ -100,6 +101,16 @@
 \input{abstract}
 \tableofcontents
 \listoffigures
+
+\section*{List of Acronyms}
+\begin{acronym}
+    \acro{AR}{Augmented Reality}
+    \acro{VR}{Virtual Reality}
+    \acro{MAR}{Mobile Augmented Reality}
+    \acro{QR}{Quick Response}
+    \acro{3D}{3-dimensinal}
+\end{acronym}
+
 
 \input{chapter1.tex}
 

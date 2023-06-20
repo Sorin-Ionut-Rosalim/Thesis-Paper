@@ -1,13 +1,13 @@
 \chapter{User Manual}\label{cap:evaluation}
 
 \section{Requirements}
-The application can be used in different area of application. The main requirement is to have a smartphone with a camera and a QR code reader. The application is available for Android and iOS. The application is available for free on the Google Play Store and the Apple App Store. The application is available in English and Romnian. The users will be able to import any model in the application using the QR code.
+The application can be used in different area of application. The main requirement is to have a smartphone with a camera and a \ac{QR} code reader. The application is available for Android and iOS. The application is available for free on the Google Play Store and the Apple App Store. The application is available in English and Romnian. The users will be able to import any model in the application using the \ac{QR} code.
 
 \section{Graphical overview of RealityEnhance}
 We will now go through some of the application's graphical user interfaces. The following should summarise the fundamental flows present in the program and accommodate the user concerning the interface.
 \pagebreak
 
-\subsection{App start page}
+\subsection{Application starting page}
 The first thing any user will see when they launch the app on their phone is the loading page. This page is a simple loading screen displayed while the app is loading. In the loading phase, the app will check if the user can run the app on their phone and if the phone has the necessary sensors to run it. If the user can run the app, the app will load the main page. If the user cannot run the app, the app will display a message that the user cannot run the app on their phone.
 \begin{figure}[h!]
     \begin{center}
@@ -20,8 +20,8 @@ The first thing any user will see when they launch the app on their phone is the
 
 
 \subsection{App burger button}
-The burger button is a button that is present on every page of the app. It is used to open the side menu. The side menu is used to navigate through the app. In the burger button, we can access the following options: QR scanner, Library, and EXIT.
-The QR scanner scans a QR code and loads a 3D model and guide into the user's smartphone. The Library is used to display all the 3D models that the user has scanned. The EXIT button is used to exit the app.
+The burger button is a button that is present on every page of the app. It is used to open the side menu. The side menu is used to navigate through the app. In the burger button, we can access the following options: \ac{QR} scanner, Library, and EXIT.
+The \ac{QR} scanner scans a \ac{QR} code and loads a \ac{3D} model and guide into the user's smartphone. The Library is used to display all the \ac{3D} models that the user has scanned. The EXIT button is used to exit the app.
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[scale=0.5]{img/App_mock/iPhone 14 - 2.png}
@@ -31,36 +31,36 @@ The QR scanner scans a QR code and loads a 3D model and guide into the user's sm
 \end{figure}
 \pagebreak
 
-\subsection{QR scanner}
-In this mode, a camera view will be displayed on the user's screen. The user will have to scan a QR code. The QR code will contain a link to a 3D model and a guide. The app will download the 3D model and the guide and display them on the user's screen. The model loaded from the QR code will be ready without entering the Library menu. The guide will be displayed on the user's screen, and the user must follow the guide to assemble the 3D model.
+\subsection{QR code scanner}
+In this mode, a camera view will be displayed on the user's screen. The user will have to scan a \ac{QR} code. The \ac{QR} code will contain a link to a \ac{3D} model and a guide. The app will download the \ac{3D} model and the guide and display them on the user's screen. The model loaded from the \ac{QR} code will be ready without entering the Library menu. The guide will be displayed on the user's screen, and the user must follow the guide to assemble the \ac{3D} model.
 
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[scale=0.5]{img/App_mock/iPhone 14 - 3.png}
-        \caption{QR scanner interface}
+        \caption{\ac{QR} code scanner interface}
         \label{fig:qr-scanner}
     \end{center}
 \end{figure}
 \pagebreak
 
-\subsection{QR valdiation}
-If the QR code is valid, the app will display a message that the QR code is valid and will load the 3D model and the guide. If the QR code is not valid, the app will display a message that the QR code is not valid.
+\subsection{QR code valdiation}
+If the \ac{QR} code is valid, the app will display a message that the \ac{QR} code is valid and will load the \ac{3D} model and the guide. If the \ac{QR} code is not valid, the app will display a message that the \ac{QR} code is not valid.
 
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[scale=0.5]{img/App_mock/iPhone 14 - 4.png}
-        \caption{QR code is valid}
+        \caption{\ac{QR} code is valid}
         \label{fig:qr-valdiation}
     \end{center}
 \end{figure}
 \pagebreak
 
 \subsection{AR vision}
-After a model is loaded, the AR module will use the phone's camera to determine the user's surroundings. It will make a 3D model of the environment and place the 3D model on top of the environment. The user will have a guide of the app in understanding the surroundings (a mesh of the planes will be displayed on the screen).
+After a model is loaded, the \ac{AR} module will use the phone's camera to determine the user's surroundings. It will make a \ac{3D} model of the environment and place the \ac{3D} model on top of the environment. The user will have a guide of the app in understanding the surroundings (a mesh of the planes will be displayed on the screen).
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[scale=0.5]{img/App_mock/iPhone 14 - 5.png}
-        \caption{AR vision interface}
+        \caption{\ac{AR} vision interface}
         \label{fig:ar-vision}
     \end{center}
 \end{figure}
@@ -101,7 +101,7 @@ The user can remove the object by clicking and holding on the object and then cl
 \pagebreak
 
 \subsection{Library}
-The app will display the Library interface when the user clicks on the Library button in the burger menu. The Library interface will display all the 3D models the user has scanned. The user can select a model and load it into the AR vision mode. In the Library interface, the user can search for and add a model to the Library. The user can also delete a model from the Library.
+The app will display the Library interface when the user clicks on the Library button in the burger menu. The Library interface will display all the \ac{3D} models the user has scanned. The user can select a model and load it into the \ac{AR} vision mode. In the Library interface, the user can search for and add a model to the Library. The user can also delete a model from the Library.
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[scale=0.5]{img/App_mock/iPhone 14 - 10.png}

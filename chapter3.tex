@@ -55,15 +55,20 @@ The ability to interact with the \ac{3D} models is a very important feature of t
 
 \clearpage
 
-\subsection*{Sequence diagram}
-The user will be able to import a model using the \ac{QR} code. The user will be able to see the model in \ac{AR} mode. The user will be able to see the guide of the model. The user will be able to see the list of all the models that he/she has imported. The user will be able to delete a model from the list of models.
-
+\subsection*{Sequence Diagram}
+The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction between the user and the application. The user starts the application and is presented with a prompt that will request permission to use the camera. After that, the \ac{AR} module will begin to scan the user's surroundings in order to map the environment. For importing a new model, RealityEnhance uses a \ac{QR} code scanner that will check if the code is valid.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{img/SequenceDiagram.png}
     \caption{Sequence diagram}
     \label{fig:SequenceDiagram}
 \end{figure}
+
+If the code fails the validation process, the user will be notified and will be prompted to scan another code. If the code is valid, the application will check if the model is already in the local storage, and it will load it. If the model is not in the local storage, the application will make a request to Google Bucket Storage to retrieve all the information about the model (model file, textures, model image, model guide/interactive guide). After the request is completed, a response will be sent back with all the information about the model. The model will then be saved in the local storage and loaded in the \ac{AR} scene.
+
+The user can also browse the Library of already imported models. It also has access to the \ac{QR} scanner interface and can search for the desired model that is wanted to be loaded in the \ac{AR} scene.
+
+The interaction between the user and the model bridges the virtual-physical gap and helps build a sense of immersion.
 
 \clearpage
 

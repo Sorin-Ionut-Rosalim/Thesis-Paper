@@ -27,10 +27,16 @@ As shown in Figure \ref{fig:architecture}, the architecture of the application c
 
 \section{Diagrams}
 \subsection*{Class diagram}
+As shown in Figure \ref{fig:ClassDiagram}, the class diagram of the application consists of the following main classes: MainActivity, QRActivity and LibraryActivity.
 
+The MainActivity class is the main class of the application. It is the first class called when the application is started, and it is responsible for the \ac{AR} mode. It contains methods dedicated to interacting with the \ac{3D} models (moving the model, rotating the model, scaling the model).
+
+The QRActivity class is responsible for the \ac{QR} code reader. It has a method called when a \ac{QR} code is scanned and verifies if it is valid. It will check if the model is already imported. If the model is already imported, it will load it from the local storage; it will also request the Google Bucket Storage.
+
+Lastly, the LibraryActivity class is responsible for the list of models and the loading of the models.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{img/ClassDiagram.png}
+    \includegraphics[height=0.9\textwidth]{img/ClassDiagram.png}
     \caption{Class diagram}
     \label{fig:ClassDiagram}
 \end{figure}

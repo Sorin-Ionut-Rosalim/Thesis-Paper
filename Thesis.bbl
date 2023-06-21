@@ -1,9 +1,33 @@
-\begin{thebibliography}{Goo}
+\begin{thebibliography}{Bur16}
+
+\bibitem[Bur16]{Burns2016}
+Monica Burns.
+\newblock {\em Deeper Learning With QR Codes and Augmented Reality: A Scannable
+  Solution for Your Classroom}.
+\newblock Corwin, 2016.
 
 \bibitem[Goo]{ARCore}
 Google.
 \newblock Arcore developer documentation.
 \newblock \url{https://developers.google.com/ar/develop}.
 \newblock Last accessed 18 June 2023.
+
+\bibitem[Inca]{AR+}
+Niantic Inc.
+\newblock Catching pokémon in ar+ mode.
+\newblock \url{https://niantic.helpshift.com/hc/en/6-pokemon-go/faq
+  28-catching-pokemon-in-ar-mode/}.
+\newblock Last accessed 21 June 2023.
+
+\bibitem[Incb]{SnapAR}
+Snap Inc.
+\newblock Snap ar.
+\newblock \url{https://ar.snap.com/}.
+
+\bibitem[Inc11]{Snapchat}
+Snap Inc.
+\newblock Snapchat.
+\newblock \url{https://www.snapchat.com/}, 2011.
+\newblock Last accessed 21 June 2023.
 
 \end{thebibliography}

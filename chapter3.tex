@@ -26,7 +26,7 @@ As shown in Figure \ref{fig:architecture}, the architecture of the application c
 \clearpage
 
 \section{Diagrams}
-\subsection*{Class diagram}
+\subsection*{Class Diagram}
 As shown in Figure \ref{fig:ClassDiagram}, the class diagram of the application consists of the following main classes: MainActivity, QRActivity and LibraryActivity.
 
 The MainActivity class is the main class of the application. It is the first class called when the application is started, and it is responsible for the \ac{AR} mode. It contains methods dedicated to interacting with the \ac{3D} models (moving the model, rotating the model, scaling the model).
@@ -37,19 +37,20 @@ Lastly, the LibraryActivity class is responsible for the list of models and the 
 \begin{figure}[ht]
     \centering
     \includegraphics[height=0.9\textwidth]{img/ClassDiagram.png}
-    \caption{Class diagram}
+    \caption{Class Diagram}
     \label{fig:ClassDiagram}
 \end{figure}
 
 
-\subsection*{Use cases}
-Each user that has a smartphone capable of running the \ac{AR} modules should be able to use the app. If the user has models already imported, he/she can use the app without any connection to the internet. If the user wants to import a new model, he/she will need to have an internet connection. The user will be able to import a model using the \ac{QR} code. The user will be able to see the model in \ac{AR} mode. The user will be able to see the guide of the model. The user will be able to see the list of all the models that he/she has imported. The user will be able to delete a model from the list of models.
+\subsection*{Use Case Diagram}
+By looking at the Use Case Diagram in Figure \ref{fig:UseCaseDiagram}, we can see what the user is able to do inside the application. RealityEnhance allows the users to scan a \ac{QR} code load or to import a new model. It also gives users the power to interact with the \ac{3D} models in the \ac{AR} mode. The users can also browse a library of already imported models.
 
+The ability to interact with the \ac{3D} models is a very important feature of the application. It allows the users to see the models from different angles and to change the size, orientation and position using familiar gestures. It also gives users the possibility to remove a selected model that is already placed in the \ac{AR} scene.
 \begin{figure}[ht]
     \centering
     \includegraphics{img/UseCaseDiagram.png}
-    \caption{Initial use case}
-    \label{fig:InitialUseCase}
+    \caption{Use Case Diagram}
+    \label{fig:UseCaseDiagram}
 \end{figure}
 
 \clearpage

@@ -13,6 +13,9 @@
 \usepackage[acronym]{glossaries}
 \usepackage{hyperref}
 \usepackage[printonlyused,withpage]{acronym}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{enumitem}
 %\usepackage{...insert other packages here...}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
@@ -21,12 +24,6 @@
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}[section]
 \newtheorem{exmp}{Example}[section]
-
-\makeglossaries
-
-\newacronym{gcd}{GCD}{Greatest Common Divisor}
-
-\newacronym{lcm}{LCM}{Least Common Multiple}
 
 \begin{document}
 \sloppy
@@ -98,27 +95,44 @@
 \newpage
 \normalsize{}
 
+%------------Abstract-----------------------------------
+\addcontentsline{toc}{chapter}{Abstract} \noindent
 \input{abstract}
+
+%------------Table of contents--------------------------
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
 \tableofcontents
+
+%------------List of figures----------------------------
+\phantomsection \label{listoffig}
+\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
 
+%------------List of Abbreviations----------------------
+\addcontentsline{toc}{chapter}{List of abbreviations}
 \include{abbreviations.tex}
 
+%------------Introduction-------------------------------
 \input{chapter1.tex}
 
+%------------Related Word-------------------------------
 \input{chapter2.tex}
 
+%------------Application description--------------------
 \input{chapter3.tex}
 
+%------------Application feature------------------------
 \input{chapter4.tex}
 
+%------------User manual--------------------------------
 \input{chapter5.tex}
 
+%------------Conclusion---------------------------------
 \input{chapter6.tex}
 
-\bibliographystyle{alpha}
+%------------Bibliography-------------------------------
+\bibliographystyle{plain}
 \bibliography{mybib}
-
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \end{document}

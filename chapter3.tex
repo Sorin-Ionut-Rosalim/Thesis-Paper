@@ -1,12 +1,11 @@
 \chapter{Application description}\label{chapter:appdescription}
 
 \section{Architecture}
-The application will be developed using the Android Studio IDE.
-The application will be developed using the Java programming language.
-The application will use the Google ARCore framework\cite{ARCore}.
-The application will use the Firebase cloud database to store the models. The application will use the \ac{QR} code reader to import the models.
-The application will use the Google Vision API to recognize the \ac{QR} code.
-As shown in Figure \ref{fig:architecture}, the architecture of the application consists of...
+RealityEnhance was developed using Android Studio Flamingo \cite{AndroidStudio}, which is an \ac{IDE} for Android development. The application was developed using Java\cite{Java}, which is a general-purpose programming language.
+
+For the \ac{AR} functionality, the application uses the ARCore software development kit (SDK).
+For the \ac{QR} code scanner, the application uses a library called code-scanner \cite{code-scanner}, and for storing the models, the application uses Google Bucket Storage.
+As shown in Figure \ref{fig:architecture}, the architecture of the application consists of \ac{APK} that runs on the users smartphone which communicates with the Google Cloud Storage.
 
 \begin{figure}[ht]
     \centering
@@ -15,13 +14,38 @@ As shown in Figure \ref{fig:architecture}, the architecture of the application c
     \label{fig:architecture}
 \end{figure}
 
-\begin{itemize}
-    \item \textbf{Android Version 7.0+} - to use the application on the phone
-    \item \textbf{Android Studio} - IDE for Android development
-    \item \textbf{Firebase} - Cloud DataBase for where the models will be retrieved
-    \item \textbf{Java} - Programming language
-    \item \textbf{Google ARCore} - \ac{AR} framework
-\end{itemize}
+\newpage
+
+As shown in Figure \ref{fig:FileStructure}, the file structure of the application consists of the following main folders: java, res and  assets. Inside the java directory are the main classes of the application (MainActivity, QRActivity, LibraryActivity). Inside the res directory are the resources of the application (icons, layouts, strings). Each layout represents a screen of the application (an Activity). Inside the assets directory are the \ac{3D} models their images and the tutorial for some of the models. The assets directory is read-only at runtime so in order to remove models from the application or to add new models, the application will copy the files from assets to the local smartphone storage.
+
+As shown in Figure \ref{fig:Dependencies}, the build.gradle file contains the dependencies of the application. Also in the bottom of the figure is the method to generate a \textit{.sfb} file from a \textit{.obj} file. Sceneform supports 3D assets in the following formats:
+\begin{enumerate}
+    \item OBJ
+    \item glTF (animations not supported)
+    \item FBX, with or without animations.
+\end{enumerate}
+The models can be animated and also they can have textures and custom material\cite{Sceneform}.
+
+\begin{figure}[ht]
+    \begin{minipage}{0.5\textwidth}
+
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{img/File Structure.png}
+            \caption{File Structure}
+            \label{fig:FileStructure}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{img/Dependencies.png}
+            \caption{build.gradle file}
+            \label{fig:Dependencies}
+        \end{center}
+    \end{minipage}
+\end{figure}
+
+
+
 
 \clearpage
 
@@ -63,6 +87,7 @@ The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction b
     \caption{Sequence diagram}
     \label{fig:SequenceDiagram}
 \end{figure}
+\newpage
 
 If the code fails the validation process, the user will be notified and will be prompted to scan another code. If the code is valid, the application will check if the model is already in the local storage, and it will load it. If the model is not in the local storage, the application will make a request to Google Bucket Storage to retrieve all the information about the model (model file, textures, model image, model guide/interactive guide). After the request is completed, a response will be sent back with all the information about the model. The model will then be saved in the local storage and loaded in the \ac{AR} scene.
 
@@ -70,10 +95,21 @@ The user can also browse the Library of already imported models. It also has acc
 
 The interaction between the user and the model bridges the virtual-physical gap and helps build a sense of immersion.
 
-\clearpage
+\newpage
+\section{Publishing RealityEnhance}
+\subsection*{Introduction to App Distribution Platforms}
+App distribution platforms are used by developers to publish their applications, and the success of an application depends on the platform it is published on. The most popular platforms are Google Play Store and Apple App Store, and they play a crucial role in reaching a wide audience.
 
-\section{Implementation}
-Implementation details...
+\subsection*{Google Play Store overview}
+Google Play Store is the official app store for Android devices\cite{GooglePlay}, offering users a diverse range of applications across various categories. This distribution platform was selected for publishing RealityEnhance because the application was developed for Android devices.
 
-\section{Deployment}
-Deployment details...
+Before publishing an application on Google Play Store, the developer must create a Google Play Console account. The Google Play Console is a platform that allows developers to publish and distribute their applications to Android users around the world. It also provides developers with tools to grow their user base and earn revenue. The Google Play Console is a web-based platform that can be accessed from any computer with a web browser. It is also available as an Android application.
+
+The application needs to be prepared for release before it can be published on Google Play Store. The developer must have a specific file structure, shown in Figure \ref{fig:GooglePlayConsole}, and then create a signed bundle file. After the bundle file is created, the developer can upload it to the Google Play Console and publish the application.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{img/GooglePlayConsole.png}
+    \caption{Google Play Console}
+    \label{fig:GooglePlayConsole}
+\end{figure}

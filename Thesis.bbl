@@ -1,4 +1,15 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{RealityEnhance}
+{RealityEnhance}.
+\newblock \url{https://github.com/Sorin-Ionut-Rosalim/Bachelor-App}.
+\newblock Last accessed 23 June 2023.
+
+\bibitem{code-scanner}
+Yuriy Budiyev.
+\newblock Code scanner library.
+\newblock \url{https://github.com/yuriy-budiyev/code-scanner}.
+\newblock Last accessed 23 June 2023.
 
 \bibitem{Burns2016}
 Monica Burns.
@@ -8,32 +19,51 @@ Monica Burns.
 
 \bibitem{ARCoreDevices}
 Google.
-\newblock Android arcore supported devices.
+\newblock {Android ARCore supported devices}.
 \newblock \url{https://developers.google.com/ar/devices#google_play}.
 \newblock Last accessed 18 June 2023.
 
-\bibitem{ARCore}
+\bibitem{AndroidStudio}
 Google.
-\newblock Arcore developer documentation.
-\newblock \url{https://developers.google.com/ar/develop}.
-\newblock Last accessed 18 June 2023.
+\newblock {Android Studio Flamigo}.
+\newblock \url{https://developer.android.com/studio/releases}.
+\newblock Last accessed 23 June 2023.
+
+\bibitem{GooglePlay}
+Google.
+\newblock Google play store.
+\newblock \url{https://play.google.com/}.
+\newblock Last accessed 23 June 2023.
+
+\bibitem{Sceneform}
+Google.
+\newblock Import and preview 3d assets.
+\newblock \url{https://developers.google.com/sceneform/develop/import-assets}.
+\newblock Last accessed 23 June 2023.
 
 \bibitem{AR+}
 Niantic Inc.
-\newblock Catching pokémon in ar+ mode.
+\newblock {Catching Pokémon in AR+ mode}.
 \newblock \url{https://niantic.helpshift.com/hc/en/6-pokemon-go/faq
   28-catching-pokemon-in-ar-mode/}.
 \newblock Last accessed 21 June 2023.
 
 \bibitem{SnapAR}
 Snap Inc.
-\newblock Snap ar.
+\newblock {Snap AR}.
 \newblock \url{https://ar.snap.com/}.
+\newblock Last accessed 21 June 2023.
 
 \bibitem{Snapchat}
 Snap Inc.
 \newblock Snapchat.
 \newblock \url{https://www.snapchat.com/}, 2011.
 \newblock Last accessed 21 June 2023.
+
+\bibitem{Java}
+Oracle James~Gosling.
+\newblock {Java SE 20}.
+\newblock \url{https://www.oracle.com/java/technologies/java-se-glance.html}.
+\newblock Last accessed 23 June 2023.
 
 \end{thebibliography}

@@ -1,0 +1,43 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Snapchat AR}}{12}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Snapchat AR}}{13}{figure.2.2}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture}}{15}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces File Structure}}{16}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces build.gradle file}}{16}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Class Diagram}}{17}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Use Case Diagram}}{18}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sequence diagram}}{19}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Google Play Console}}{21}{figure.3.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces QR code-scanner methods}}{23}{figure.4.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {loadModelQR}}}{23}{figure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {downloadModel}}}{23}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces onResponse method}}{23}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Move files from assets to local storage}}{24}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Load models in the library}}{25}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces addModelToScene method}}{26}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces removeAnchorNode method}}{26}{figure.4.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Loading page}}{28}{figure.5.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Image 1}}}{28}{figure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Image 2}}}{28}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Navigation and toolbar}}{29}{figure.5.2}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {AR Activity}}}{29}{figure.5.2}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {QR Activity}}}{29}{figure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Library Activity}}}{29}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \ac {AR} Activity}}{30}{figure.5.3}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Scanning animation}}}{30}{figure.5.3}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Scanned enviroment}}}{30}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \ac {QR} Activity}}{31}{figure.5.4}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {QR Activity}}}{31}{figure.5.4}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Scanning QR code}}}{31}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Library Activity}}{32}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Placing a model}}{33}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Removing a model}}{34}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Removing a model}}{35}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Resized and rotated a model}}{36}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Interactive model}}{37}{figure.5.10}%
+\addvspace {10\p@ }

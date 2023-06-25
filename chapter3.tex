@@ -52,12 +52,10 @@ The models can be animated and also they can have textures and custom material\c
 \section{Diagrams}
 \subsection*{Class Diagram}
 As shown in Figure \ref{fig:ClassDiagram}, the class diagram of the application consists of the following main classes: MainActivity, QRActivity and LibraryActivity.
-
+\par
 The MainActivity class is the main class of the application. It is the first class called when the application is started, and it is responsible for the \ac{AR} mode. It contains methods dedicated to interacting with the \ac{3D} models (moving the model, rotating the model, scaling the model).
-
-The QRActivity class is responsible for the \ac{QR} code reader. It has a method called when a \ac{QR} code is scanned and verifies if it is valid. It will check if the model is already imported. If the model is already imported, it will load it from the local storage; it will also request the Google Bucket Storage.
-
-Lastly, the LibraryActivity class is responsible for the list of models and the loading of the models.
+\par
+The QRActivity class is responsible for the \ac{QR} code reader. It has a method called when a \ac{QR} code is scanned and verifies if it is valid. It will check if the model is already imported. If the model is already imported, it will load it from the local storage; it will also request the Google Bucket Storage. Lastly, the LibraryActivity class is responsible for the list of models and the loading of the models.
 \begin{figure}[ht]
     \centering
     \includegraphics[height=0.9\textwidth]{img/ClassDiagram.png}
@@ -67,9 +65,9 @@ Lastly, the LibraryActivity class is responsible for the list of models and the 
 
 
 \subsection*{Use Case Diagram}
-By looking at the Use Case Diagram in Figure \ref{fig:UseCaseDiagram}, we can see what the user is able to do inside the application. RealityEnhance allows the users to scan a \ac{QR} code load or to import a new model. It also gives users the power to interact with the \ac{3D} models in the \ac{AR} mode. The users can also browse a library of already imported models.
-
-The ability to interact with the \ac{3D} models is a very important feature of the application. It allows the users to see the models from different angles and to change the size, orientation and position using familiar gestures. It also gives users the possibility to remove a selected model that is already placed in the \ac{AR} scene.
+Looking at the Use Case Diagram in Figure \ref{fig:UseCaseDiagram}, we can see what the user is able to do inside the application. RealityEnhance allows users to load or import a new model by scanning a \ac{QR} code. It also gives users the power to interact with the \ac{3D} models in the \ac{AR} mode.  Users can also search a library of recently used models.
+\par
+The application's ability to interact with \ac{3D} models is a critical feature. It enables users to view the models from various perspectives and change their size, orientation, and position with simple gestures. It also allows users to remove a selected model that has already been placed in the AR scene.
 \begin{figure}[ht]
     \centering
     \includegraphics{img/UseCaseDiagram.png}
@@ -80,7 +78,7 @@ The ability to interact with the \ac{3D} models is a very important feature of t
 \clearpage
 
 \subsection*{Sequence Diagram}
-The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction between the user and the application. The user starts the application and is presented with a prompt that will request permission to use the camera. After that, the \ac{AR} module will begin to scan the user's surroundings in order to map the environment. For importing a new model, RealityEnhance uses a \ac{QR} code scanner that will check if the code is valid.
+The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction between the user and the application. When the user starts the application, a prompt will pop-up and request permission to use the camera. After that, the \ac{AR} module will begin to scan the user's surroundings in order to map the environment. For importing a new model, RealityEnhance uses a \ac{QR} code scanner that will check if the code is valid.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{img/SequenceDiagram.png}
@@ -89,27 +87,25 @@ The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction b
 \end{figure}
 \newpage
 
-If the code fails the validation process, the user will be notified and will be prompted to scan another code. If the code is valid, the application will check if the model is already in the local storage, and it will load it. If the model is not in the local storage, the application will make a request to Google Bucket Storage to retrieve all the information about the model (model file, textures, model image, model guide/interactive guide). After the request is completed, a response will be sent back with all the information about the model. The model will then be saved in the local storage and loaded in the \ac{AR} scene.
+If the code fails the validation process, the user is notified and asked to scan another code. If the code is correct, the application will check to see if the model is already in local storage and then load it. If the model is not in the application's local storage, it will send a request to Google Bucket Storage to retrieve all of the model's information (model file, textures, model image, model guide/interactive guide). When the request is completed, a response will be sent back with all of the model's information. The model will then be saved locally and loaded into the AR scene.
 
-The user can also browse the Library of already imported models. It also has access to the \ac{QR} scanner interface and can search for the desired model that is wanted to be loaded in the \ac{AR} scene.
-
-The interaction between the user and the model bridges the virtual-physical gap and helps build a sense of immersion.
+The user can also browse the Library of already imported models. It also has access to the QR scanner interface and can search for the desired model that is wanted to be loaded in the augmented reality scene. In the \ac{AR} mode the user is able to place a multitude of models at the same time. This models can be rotated, resized and moved. The interaction between the user and the model bridges the virtual-physical gap and helps build a sense of immersion.
 
 \newpage
 \section{Publishing RealityEnhance}
 \subsection*{Introduction to App Distribution Platforms}
-App distribution platforms are used by developers to publish their applications, and the success of an application depends on the platform it is published on. The most popular platforms are Google Play Store and Apple App Store, and they play a crucial role in reaching a wide audience.
+Developers rely on app distribution platforms to release their applications. The platform they choose greatly impacts their application success. Among the top platforms, Google Play Store and Apple App Store stand out as the go-to choices. These platforms hold immense significance in terms of reaching a vast audience and making an application widely accessible.
 
-\subsection*{Google Play Store overview}
+\subsection*{Google Play Store}
 Google Play Store is the official app store for Android devices\cite{GooglePlay}, offering users a diverse range of applications across various categories. This distribution platform was selected for publishing RealityEnhance because the application was developed for Android devices.
 
-Before publishing an application on Google Play Store, the developer must create a Google Play Console account. The Google Play Console is a platform that allows developers to publish and distribute their applications to Android users around the world. It also provides developers with tools to grow their user base and earn revenue. The Google Play Console is a web-based platform that can be accessed from any computer with a web browser. It is also available as an Android application.
+Before publishing an application on Google Play Store, the developers must create a Google Play Console account. The Google Play Console serves as a powerful platform for developers to share and distribute their applications to Android users worldwide. Not only does it provide a convenient way to reach a vast audience, but it also equips developers with a range of tools to expand their user base and generate revenue.
 
-The application needs to be prepared for release before it can be published on Google Play Store. The developer must have a specific file structure, shown in Figure \ref{fig:GooglePlayConsole}, and then create a signed bundle file. After the bundle file is created, the developer can upload it to the Google Play Console and publish the application.
+Accessing the Google Play Console is a breeze since it is a web-based platform as shown is Figure \ref*{fig:GooglePlayConsole}. However, before publishing anything on the Google Play Store, it is crucial to ensure that the application is properly prepared for release. Taking the necessary steps to prepare the application will help guarantee a smooth and successful launch on the platform. The developer must have a specific file structure, and then create a signed bundle file. After the bundle file is created, and validated by Google Play Console, the application can be published.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{img/GooglePlayConsole.png}
+    \includegraphics[width=.9\textwidth]{img/GooglePlayConsole.png}
     \caption{Google Play Console}
     \label{fig:GooglePlayConsole}
 \end{figure}

@@ -5,7 +5,7 @@ RealityEnhance was developed using Android Studio Flamingo \cite{AndroidStudio},
 
 For the \ac{AR} functionality, the application uses the ARCore software development kit (SDK).
 For the \ac{QR} code scanner, the application uses a library called code-scanner \cite{code-scanner}, and for storing the models, the application uses Google Bucket Storage.
-As shown in Figure \ref{fig:architecture}, the architecture of the application consists of \ac{APK} that runs on the users smartphone which communicates with the Google Cloud Storage.
+As shown in Figure \ref{fig:architecture}, the architecture of the application consists of \ac{APK} that runs on the user's smartphone, which communicates with Google Cloud Storage.
 
 \begin{figure}[ht]
     \centering
@@ -16,9 +16,9 @@ As shown in Figure \ref{fig:architecture}, the architecture of the application c
 
 \newpage
 
-As shown in Figure \ref{fig:FileStructure}, the file structure of the application consists of the following main folders: java, res and  assets. Inside the java directory are the main classes of the application (MainActivity, QRActivity, LibraryActivity). Inside the res directory are the resources of the application (icons, layouts, strings). Each layout represents a screen of the application (an Activity). Inside the assets directory are the \ac{3D} models their images and the tutorial for some of the models. The assets directory is read-only at runtime so in order to remove models from the application or to add new models, the application will copy the files from assets to the local smartphone storage.
+As shown in Figure \ref{fig:FileStructure}, the file structure of the application consists of the following main folders: java, res and assets. Inside the \textit{java} directory are the main classes of the application (MainActivity, QRActivity, LibraryActivity). Inside the res directory are the resources of the application (icons, layouts, strings). Each layout represents a screen of the application (an Activity). Inside the assets directory are the \ac{3D} models, their images and the tutorial for some of the models. The assets directory is read-only at runtime, so to remove models from the application or add new models, the application will copy the files from assets to the local smartphone storage.
 
-As shown in Figure \ref{fig:Dependencies}, the build.gradle file contains the dependencies of the application. Also in the bottom of the figure is the method to generate a \textit{.sfb} file from a \textit{.obj} file. Sceneform supports 3D assets in the following formats:
+As shown in Figure \ref{fig:Dependencies}, the \textit{build.gradle} file contains the dependencies of the application. Also at the bottom of the figure is the method to generate a \textit{.sfb} file from a \textit{.obj} file. Sceneform supports \ac{3D} assets in the following formats:
 \begin{enumerate}
     \item OBJ
     \item glTF (animations not supported)
@@ -65,9 +65,9 @@ The QRActivity class is responsible for the \ac{QR} code reader. It has a method
 
 
 \subsection*{Use Case Diagram}
-Looking at the Use Case Diagram in Figure \ref{fig:UseCaseDiagram}, we can see what the user is able to do inside the application. RealityEnhance allows users to load or import a new model by scanning a \ac{QR} code. It also gives users the power to interact with the \ac{3D} models in the \ac{AR} mode.  Users can also search a library of recently used models.
-\par
-The application's ability to interact with \ac{3D} models is a critical feature. It enables users to view the models from various perspectives and change their size, orientation, and position with simple gestures. It also allows users to remove a selected model that has already been placed in the AR scene.
+By examining the Use Case Diagram in Figure \ref{fig:UseCaseDiagram}, we gain insights into the functionalities available to users within the application. RealityEnhance allows users to load or import a new model by scanning a \ac{QR} code. Additionally, the application empowers users to engage with the \ac{3D} models in \ac{AR} mode, granting them a dynamic and immersive experience. Furthermore, users can conveniently access a library containing recently used models.
+
+The application's ability to interact with \ac{3D} models is a critical feature. It allows users to explore the models from various perspectives and manipulate their size, orientation, and position through simple gestures. Moreover, users are free to remove any selected model that has already been placed within the \ac{AR} scene, providing them with flexibility and control over their augmented reality experience.
 \begin{figure}[ht]
     \centering
     \includegraphics{img/UseCaseDiagram.png}
@@ -78,7 +78,7 @@ The application's ability to interact with \ac{3D} models is a critical feature.
 \clearpage
 
 \subsection*{Sequence Diagram}
-The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction between the user and the application. When the user starts the application, a prompt will pop-up and request permission to use the camera. After that, the \ac{AR} module will begin to scan the user's surroundings in order to map the environment. For importing a new model, RealityEnhance uses a \ac{QR} code scanner that will check if the code is valid.
+The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction between the user and the application. When the user starts the application, a prompt will pop up and request permission to use the camera. After that, the \ac{AR} module will begin to scan the user's surroundings in order to map the environment. For importing a new model, RealityEnhance uses a \ac{QR} code scanner that will check if the code is valid.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{img/SequenceDiagram.png}
@@ -87,9 +87,9 @@ The Sequence Diagram in Figure \ref{fig:SequenceDiagram} shows the interaction b
 \end{figure}
 \newpage
 
-If the code fails the validation process, the user is notified and asked to scan another code. If the code is correct, the application will check to see if the model is already in local storage and then load it. If the model is not in the application's local storage, it will send a request to Google Bucket Storage to retrieve all of the model's information (model file, textures, model image, model guide/interactive guide). When the request is completed, a response will be sent back with all of the model's information. The model will then be saved locally and loaded into the AR scene.
+If the code fails the validation process, the user is notified and asked to scan another code. If the code is correct, the application will check to see if the model is already in local storage and then load it. If the model is not in the application's local storage, it will send a request to Google Bucket Storage to retrieve all of the model's information (model file, textures, model image, model guide/interactive guide). When the request is completed, a response will be sent back with all of the model's information. The model will then be saved locally and loaded into the \ac{AR} scene.
 
-The user can also browse the Library of already imported models. It also has access to the QR scanner interface and can search for the desired model that is wanted to be loaded in the augmented reality scene. In the \ac{AR} mode the user is able to place a multitude of models at the same time. This models can be rotated, resized and moved. The interaction between the user and the model bridges the virtual-physical gap and helps build a sense of immersion.
+The user can also browse the Library of already imported models. It also has access to the QR scanner interface and can search for the desired model that is wanted to be loaded in the augmented reality scene. In the \ac{AR} mode, the user is able to place a multitude of models at the same time. These models can be rotated, resized and moved. The interaction between the user and the model bridges the virtual-physical gap and helps build a sense of immersion.
 
 \newpage
 \section{Publishing RealityEnhance}
@@ -101,7 +101,7 @@ Google Play Store is the official app store for Android devices\cite{GooglePlay}
 
 Before publishing an application on Google Play Store, the developers must create a Google Play Console account. The Google Play Console serves as a powerful platform for developers to share and distribute their applications to Android users worldwide. Not only does it provide a convenient way to reach a vast audience, but it also equips developers with a range of tools to expand their user base and generate revenue.
 
-Accessing the Google Play Console is a breeze since it is a web-based platform as shown is Figure \ref*{fig:GooglePlayConsole}. However, before publishing anything on the Google Play Store, it is crucial to ensure that the application is properly prepared for release. Taking the necessary steps to prepare the application will help guarantee a smooth and successful launch on the platform. The developer must have a specific file structure, and then create a signed bundle file. After the bundle file is created, and validated by Google Play Console, the application can be published.
+Accessing the Google Play Console is a breeze since it is a web-based platform, as shown in Figure \ref*{fig:GooglePlayConsole}. However, before publishing anything on the Google Play Store, it is crucial to ensure that the application is properly prepared for release. Taking the necessary steps to prepare the application will help guarantee a smooth and successful launch on the platform. The developer must have a specific file structure and then create a signed bundle file. After the bundle file is created and validated by Google Play Console, the application can be published.
 
 \begin{figure}[ht]
     \centering

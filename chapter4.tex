@@ -1,7 +1,7 @@
 \chapter{Implementation of the application features}\label{cap:aplicationfeatures}
 
 \section{QR code-scanner}
-The only way to import a new model is by scanning a QR code. The QR code contains the ID of the model. The application will check if the model is already in the local models directory. If it is it will load it from there, as shown in Figure \ref{fig:loadModelQR}. If it is not, it will proceed to download it from the Google Bucket Storage.
+The only way to import a new model is by scanning a QR code. The QR code contains the ID of the model. The application will check if the model is already in the local models' directory. If it is, it will load it from there, as shown in Figure \ref{fig:loadModelQR}. If it is not, it will proceed to download it from Google Bucket Storage.
 
 \begin{wrapfigure}{r}{.5\textwidth}
     \centering
@@ -14,7 +14,7 @@ The only way to import a new model is by scanning a QR code. The QR code contain
 
 
 
-Then the application will handle the response from the Google Bucket Storage. If the response is successful, the model will be saved in the local models directory and loaded in the \ac{AR} scene. If the response is not successful, the application will display an error message, as seen in Figure \ref{fig:onResponse}.
+Then the application will handle the response from Google Bucket Storage. If the response is successful, the model will be saved in the local models' directory and loaded in the \ac{AR} scene. If the response is not successful, the application will display an error message, as seen in Figure \ref{fig:onResponse}.
 
 
 \begin{wrapfigure}{l}{.45\textwidth}
@@ -37,11 +37,11 @@ When the user starts the application, the method from Figure \ref{fig:tryMoveAss
 \end{figure}
 
 
-It will load the models from the assets directory to the local smartphone storage, because the assets directory is read-only at runtime and the application must store all the newly imported models at the same location. The method will check if the models are already in the local storage. If they are, it will load them from there. If they are not, it will copy them from the assets directory to the local storage.
+It will load the models from the assets directory to the local smartphone storage because the assets directory is read-only at runtime, and the application must store all the newly imported models at the same location. The method will check if the models are already in the local storage. If they are, it will load them from there. If they are not, it will copy them from the assets directory to the local storage.
 
 \newpage
 \section{Models' library}
-In the Library Activity, the models will be displayed on two columns. This is done at the start of the activity, in the method from Figure \ref{fig:loadModels}. It will go through all the files from the local models directory and it will create a new button for each file.
+In the Library Activity, the models will be displayed in two columns. This is done at the start of the activity, in the method from Figure \ref{fig:loadModels}. It will go through all the files from the local models' directory and it will create a new button for each file.
 
 The buttons will have as background the image of the model. If the model does not have a background image, the button will have as background the name of the model. When the user clicks on a button, the model will be loaded in the \ac{AR} scene.
 
@@ -54,7 +54,7 @@ The buttons will have as background the image of the model. If the model does no
 
 \newpage
 \section{Interaction with  the models}
-The user can interact with the models in the \ac{AR} scene by using the buttons on the screen and using smart gestures on the model. As seen in Figure \ref{fig:addModeltoScene}, when the user taps on the screen the addModelToScene method will be called. It will check if the model has a interactive mode, if it does, it will activate the button responsible for the interaction with the model. If the model does not have an interactive mode, it will display a message to the user. Each time the user presses the interaction button, the model will change its state.
+The user can interact with the models in the \ac{AR} scene by using the buttons on the screen and using smart gestures on the model. As seen in Figure \ref{fig:addModeltoScene}, when the user taps on the screen, the addModelToScene method will be called. It will check if the model has an interactive mode; if it does, it will activate the button responsible for the interaction with the model. If the model does not have an interactive mode, it will display a message to the user. Each time the user presses the interaction button, the model will change its state.
 
 \begin{figure}[H]
     \centering
@@ -63,7 +63,7 @@ The user can interact with the models in the \ac{AR} scene by using the buttons 
     \label{fig:addModeltoScene}
 \end{figure}
 
-If a model is selected and the user wants to remove that model from the scene, he can do that by pressing the remove button. This will call the removeAnchorNode method, as seen in Figure \ref{fig:removeAnchorNode}. It will remove the model from the scene and it will set the selectedModel variable to null.
+If a model is selected and the user wants to remove that model from the scene, he can do that by pressing the remove button. This will call the removeAnchorNode method, as seen in Figure \ref{fig:removeAnchorNode}. It will remove the model from the scene, and it will set the \textit{selectedModel} variable to null.
 
 \begin{figure}[H]
     \centering
